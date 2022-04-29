@@ -52,6 +52,7 @@ class ObjInt: public ObjBase {
 
 public:
 	ObjInt();
+	ObjInt(string, int);
 	void setInt(int inteiro);
 	int getInt();
 	virtual void print();
@@ -60,6 +61,11 @@ public:
 private:
 	int inteiro;
 };
+
+ObjInt::ObjInt(string nome, int inteiro) {
+	this->name=nome;
+	this->inteiro=inteiro;
+}
 
 ObjInt::ObjInt() {
 	setName("Numero inteiro");
@@ -84,6 +90,7 @@ class ObjDouble: public ObjBase {
 
 public:
 	ObjDouble();
+	ObjDouble(string, double);
 	void setDouble(double decimal);
 	double getDouble();
 	virtual void print();
@@ -95,6 +102,11 @@ private:
 ObjDouble::ObjDouble() {
 	setName("Número decimal");
 	setDouble(0.0);
+}
+
+ObjDouble::ObjDouble(string nome, double decimal) {
+	this->name=nome;
+	this->decimal=decimal;
 }
 
 void ObjDouble::setDouble(double decimal) {
